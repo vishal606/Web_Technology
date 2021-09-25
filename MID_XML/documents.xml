@@ -1,0 +1,23 @@
+<document>
+  <employee>
+      <id>11</id>
+      <name>Samsung</name>
+      <unitprice>35000</unitprice>
+      <stock>50</stock>
+      <status>1</status>
+  </employee>
+   <employee>
+      <id>20</id>
+      <name>HTC</name>
+      <unitprice>63500</unitprice>
+      <stock>35</stock>
+      <status>0</status>
+  </employee>
+   <employee>
+      <id>23</id>
+      <name>Nokia</name>
+      <unitprice>21500</unitprice>
+      <stock>100</stock>
+      <status>1</status>
+  </employee>
+</document>
