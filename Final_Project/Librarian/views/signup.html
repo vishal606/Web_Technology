@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <!-- <a class="active" href="#home">Home</a> -->
+  <a href="login.html">Login</a>
+  <a href="signup.html">Signup</a>
+ 
+ 
+</div>
+<div class="content">
+  <center><a href="home.php"><img src="../assets/mainlogo.png"></a></center>
+        <hr></hr>
+
+
+	<form method="post" action="../controller/signupCheck.php">
+		<fieldset><center>
+      <td></td><hr>
+			<legend>Signup</legend><hr>
+			<table>
+				<tr>
+					<td height="40px">User Id: </td>
+					<td><input type="text" name="uid" value=""></td>
+				</tr>
+				<tr>
+					<td height="40px">Password:</td>
+					<td><input type="password" name="password" value=""></td>
+				</tr>
+        <tr>
+          <td height="40px">Name:  <br>
+            <small>
+              <span id="err_name" style="color:red"></span>
+            </small>
+          </td>
+          <td><input type="text" name="name" value="" onkeyup="validate_name()"></td>
+        </tr>
+        <tr>
+          <td height="40px">Date of Birth: </td>
+          <td><input type="date" name="dob" value=""></td>
+        </tr>
+        <tr>
+          <td height="40px">Gender: </td>
+          <td>
+            <select name="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Others">Others</option>
+          </select>
+          </td>
+        </tr>
+        <tr>
+          <td height="40px">Address: </td>
+          <td><input type="text" name="address" value=""></td>
+        </tr>
+				<tr>
+					<td height="40px">email:</td>
+					<td><input type="email" name="email" value=""></td>
+				</tr>
+        <tr>
+          <td height="40px">Picture: </td>
+          <td><input type="file" name="picture" value=""></td>
+        </tr>
+				<tr>
+					<td><br><br></td>
+					<td><input type="submit" name="submit" value="Submit"></td>
+				</tr>
+			</table>
+		</fieldset></center>
+	</form>
+  <script type="text/javascript" src="../controller/script.js"></script>
+</body>
+</html>
